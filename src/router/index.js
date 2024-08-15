@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import AddTaskView from '@/views/AddTaskView.vue'
 import ShowToDoListView from '@/views/ShowToDoListView.vue'
+import UpdateTaskView from '@/views/UpdateTaskView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,6 +17,11 @@ const router = createRouter({
       path: '/ShowToDoList',
       name: 'ShowToDoList',
       component: ShowToDoListView
+    },
+    {
+      path: '/update/:id',
+      name: 'updatetask',
+      component: UpdateTaskView
     },
     {
       path: '/about',
