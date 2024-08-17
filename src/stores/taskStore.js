@@ -1,10 +1,9 @@
-// stores/taskStore.js
 import { defineStore } from 'pinia';
-import { v4 as uuidv4 } from 'uuid'; // Pour générer des ID uniques
+import { v4 as uuidv4 } from 'uuid'; // Pour générer des ID uniques v4 etant la fonction et uuid la biblio
 
 export const useTaskStore = defineStore('taskStore', {
   state: () => ({
-    tasks: JSON.parse(localStorage.getItem("tasks"))||[]
+    tasks: JSON.parse(localStorage.getItem("tasks"))||[] //initialisation de tasks aux eléments stockées dans le localstorage ou l'usage d'un tableau vide si ........le localstorage est vide 
 
   }),
   
@@ -25,4 +24,4 @@ export const useTaskStore = defineStore('taskStore', {
       }
     }
   }
-});
+})

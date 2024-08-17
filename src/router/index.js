@@ -4,10 +4,25 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AddTaskView from '@/views/AddTaskView.vue'
 import ShowToDoListView from '@/views/ShowToDoListView.vue'
 import UpdateTaskView from '@/views/UpdateTaskView.vue'
+import InscriptionUsersView from '@/views/InscriptionUsersView.vue'
+import ConnexionUsersView from '@/views/ConnexionUsersView.vue'
+import ConnexionUsers from '@/components/ConnexionUsers.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: InscriptionUsersView
+    },
+
+    {
+      path: '/login',
+      name: 'Connexion',
+      component: ConnexionUsersView
+    },
+
     {
       path: '/AddTask',
       name: 'AddTask',
